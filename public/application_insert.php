@@ -17,9 +17,10 @@
 
     $created_at = date("Y-m-d H:i:s");
     $updated_at = date("Y-m-d H:i:s");
+    $status_id = 1;
 
     $stmt = $conn->prepare("INSERT INTO tbl_application (title_name, first_name, last_name, email, phone, nationality, id_card, school_name, highest_education, gpa, ielts_toefl_pte, interested_to_join, program, address, created_at, updated_at, status_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-    $stmt->bind_param("sssssssssssssssss", $title_name, $first_name, $last_name, $email, $full_number, $nationality, $id_card, $school_name, $highest_education, $gpa, $ielts_toefl_pte, $interested_to_join, $program, $address, $created_at, $updated_at, 1);
+    $stmt->bind_param("sssssssssdssssssi", $title_name, $first_name, $last_name, $email, $full_number, $nationality, $id_card, $school_name, $highest_education, $gpa, $ielts_toefl_pte, $interested_to_join, $program, $address, $created_at, $updated_at, $status_id);
     $stmt->execute();
 
     if($stmt->error) {
