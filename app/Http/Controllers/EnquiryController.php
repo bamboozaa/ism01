@@ -45,12 +45,16 @@ class EnquiryController extends Controller
 
         $testMailData = [
             'title' => 'Email From Enquiry Form',
-            'body' => 'This is the body of test email.' . $request->name,
+            // 'body' => 'This is the body of test email',
+            'name' => $request->name,
+            'email' => $request->email,
+            'message' => $request->direct_message,
+            'create_date' => date('Y-m-d H:i:s'),
         ];
 
         Enquiry::create($input);
 
-        Mail::to('komsan_aia@utcc.ac.th')->send(new SendMail($testMailData));
+        Mail::to('ism@utcc.ac.th')->send(new SendMail($testMailData));
 
         session()->flash('success', 'Enquiry created successfully.');
 

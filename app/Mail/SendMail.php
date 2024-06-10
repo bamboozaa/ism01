@@ -29,7 +29,7 @@ class SendMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Email From Enquiry Form',
+            subject: 'UTCC INTERNATIONAL ENQUIRY FORM',
         );
     }
 
