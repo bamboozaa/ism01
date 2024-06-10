@@ -17,7 +17,7 @@
 
     $created_at = date("Y-m-d H:i:s");
 
-    $stmt = $conn->prepare("INSERT INTO tbl_enquiry (name, nationality, program_interested, entry_semester, current_education, school_name, email, phone, direct_message, where_did_you_hear, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+    $stmt = $conn->prepare("INSERT INTO enquiries (name, nationality, program_interested, entry_semester, current_education, school_name, email, phone, direct_message, where_did_you_hear, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
     $stmt->bind_param("sssssssssss", $name, $nationality, $program_interested, $entry_semester, $current_education, $school_name, $email, $full_number, $direct_message, $where_did_you_hear, $created_at);
     $stmt->execute();
 
