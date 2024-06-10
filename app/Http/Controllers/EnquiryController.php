@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreEnquiryRequest;
 use App\Http\Requests\UpdateEnquiryRequest;
 use App\Models\Enquiry;
+use Mail;
+use App\Mail\SendMail;
 
 class EnquiryController extends Controller
 {
@@ -41,7 +43,14 @@ class EnquiryController extends Controller
         $input['direct_message'] = $request->direct_message;
         $input['where_did_you_hear'] = $request->where_did_you_hear;
 
+        $testMailData = [
+            'title' => 'Email From Enquiry Form',
+            'body' => 'This is the body of test email.' . $request->name,
+        ];
+
         Enquiry::create($input);
+
+        Mail::to('komsan_aia@utcc.ac.th')->send(new SendMail($testMailData));
 
         session()->flash('success', 'Enquiry created successfully.');
 
