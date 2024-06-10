@@ -43,6 +43,8 @@ class EnquiryController extends Controller
         $input['direct_message'] = $request->direct_message;
         $input['where_did_you_hear'] = $request->where_did_you_hear;
 
+        $id = Enquiry::create($input)->enq_id;
+
         $testMailData = [
             'title' => 'Email From Enquiry Form',
             // 'body' => 'This is the body of test email',
@@ -50,9 +52,8 @@ class EnquiryController extends Controller
             'email' => $request->email,
             'message' => $request->direct_message,
             'create_date' => date('Y-m-d H:i:s'),
+            'id' => $id,
         ];
-
-        Enquiry::create($input);
 
         Mail::to('ism@utcc.ac.th')->send(new SendMail($testMailData));
 

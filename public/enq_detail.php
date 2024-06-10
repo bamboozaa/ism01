@@ -1,14 +1,16 @@
 <?php
 if(isset($_GET["id"]) && !empty(trim($_GET["id"]))){
-  require './inc/connect.inc.php';
-  require './inc/function.inc.php';
+  require 'con.inc.php';
+// include 'con.inc.php';
+//   require './inc/function.inc.php';
 
   foreach($_GET as $key => $val) {
     ${$key}=$val;
   }
 
-  $sql = "SELECT * FROM " . TBL_ENQ . " WHERE `enq_id` = '". $id . "'";
-  $result = select($sql);
+  $sql = "SELECT * FROM enquiries WHERE `enq_id` = '". $id . "'";
+//   $result = select($sql);
+    $result = $conn->query($sql);
   foreach ($result as $key => $row) {
 ?>
 <!doctype html>
@@ -80,14 +82,17 @@ if(isset($_GET["id"]) && !empty(trim($_GET["id"]))){
                   <input type="tel" id="phone" name="phone" value="<?= $row['phone'] ?>" class="form-control" readonly />
                 </div>
               </div>
-              <div class="row">
-                <div class="form-group col-md-6">
-                  <label for="direct_message">DIRECT MESSAGE </label>
-                  <input type="text" id="direct_message" name="direct_message" value="<?= $row['direct_message'] ?>" class="form-control" readonly />
-                </div>
-                <div class="form-group col-md-6">
+              <div class="row mb-3">
+                <div class="col-12">
                   <label for="where_did_you_hear">WHERE DID YOU HEAR ABOUT UTCC-ISM? </label>
                   <input type="text" id="where_did_you_hear" name="where_did_you_hear" value="<?= $row['where_did_you_hear'] ?>" class="form-control" readonly />
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col-12">
+                  <label for="direct_message">DIRECT MESSAGE </label>
+                  <!-- <input type="text" id="direct_message" name="direct_message" value="<?= $row['direct_message'] ?>" class="form-control" readonly /> -->
+                  <textarea name="direct_message" class="form-control" id="direct_message" rows="3" readonly><?= $row['direct_message'] ?></textarea>
                 </div>
               </div>
               <div class="row">

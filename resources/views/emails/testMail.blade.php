@@ -9,5 +9,6 @@
     <p>Name : {{ $testMailData['name'] }}</p>
     <p>Email : {{ $testMailData['email'] }}</p>
     <p>Direct Message : {{ $testMailData['message'] }}</p>
+    <p>https://admissionism.utcc.ac.th/enq_detail.php?id={{ $testMailData['id'] }}</p>
 </body>
 </html>

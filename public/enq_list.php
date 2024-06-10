@@ -40,7 +40,7 @@ include 'con.inc.php';
               <tbody>
                 <?php
                 // $sql = "SELECT * FROM " . TBL_ENQ;
-                $sql = "SELECT * FROM tbl_enquiry";
+                $sql = "SELECT * FROM enquiries";
                 // $result = select($sql);
                 $result = $conn->query($sql);
                 foreach ($result as $key => $row) {

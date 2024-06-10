@@ -172,18 +172,8 @@
                                 </div>
                             </div>
                             <div class="row mb-3">
-                                <div class="col-md-6">
-                                    <label for="direct_message">DIRECT MESSAGE <span class="text-danger">*</span></label>
-                                    <input type="text" id="direct_message" name="direct_message" class="form-control @error('direct_message') is-invalid @enderror" />
 
-                                    @error('direct_message')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                    @enderror
-
-                                </div>
-                                <div class="col-md-6">
+                                <div class="col-12">
                                     <label for="where_did_you_hear">WHERE DID YOU HEAR ABOUT UTCC-ISM? <span class="text-danger">*</span></label><br />
                                     <input type="text" id="where_did_you_hear" name="where_did_you_hear" class="form-control @error('direct_message') is-invalid @enderror">
 
@@ -194,6 +184,21 @@
                                     @enderror
 
                                 </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-12">
+                                    <label for="direct_message">DIRECT MESSAGE <span class="text-danger">*</span></label>
+                                    <textarea name="direct_message" class="form-control  @error('direct_message') is-invalid @enderror" id="direct_message" rows="3"></textarea>
+                                    {{-- <input type="text" id="direct_message" name="direct_message" class="form-control @error('direct_message') is-invalid @enderror" /> --}}
+
+                                    @error('direct_message')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+
+                                </div>
+
                             </div>
                             <div class="text-left">
                                 <div class="row">
