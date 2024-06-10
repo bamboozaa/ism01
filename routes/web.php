@@ -17,3 +17,5 @@ Route::get('/', function () {
     // return view('welcome');
     return redirect()->to('https://ism.utcc.ac.th');
 });
+
+Route::resource('/enquiries', \App\Http\Controllers\EnquiryController::class);
