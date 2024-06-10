@@ -1,6 +1,7 @@
 <?php
-require './inc/connect.inc.php';
-require './inc/function.inc.php';
+include 'con.inc.php';
+// require './inc/connect.inc.php';
+// require './inc/function.inc.php';
 ?>
 
 <!doctype html>
@@ -38,8 +39,10 @@ require './inc/function.inc.php';
               </thead>
               <tbody>
                 <?php
-                $sql = "SELECT * FROM " . TBL_ENQ;
-                $result = select($sql);
+                // $sql = "SELECT * FROM " . TBL_ENQ;
+                $sql = "SELECT * FROM tbl_enquiry";
+                // $result = select($sql);
+                $result = $conn->query($sql);
                 foreach ($result as $key => $row) {
                 ?>
                   <tr>
