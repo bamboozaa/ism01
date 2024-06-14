@@ -10,6 +10,6 @@
     <p>Email : {{ $testMailData['email'] }}</p>
     <p>Direct Message : {{ $testMailData['message'] }}</p>
     <p>https://admissionism.utcc.ac.th/enquiries/{{ $testMailData['id'] }}</p>
-    <p><a href="https://admission.utcc.ac.th/enquiries">List all</a></p>
+    <p><a href="https://admissionism.utcc.ac.th/enquiries">List all</a></p>
 </body>
 </html>
