@@ -30,15 +30,15 @@
                                                 <table>
                                                     <tbody>
                                                         <tr>
-                                                            <th><h3>From</h3></th>
+                                                            <th align="right"><h3>From </h3></th>
                                                             <td>{{ $testMailData['name'] }}</td>
                                                         </tr>
                                                         <tr>
-                                                            <th><h3>Email</h3></th>
+                                                            <th align="right"><h3>Email </h3></th>
                                                             <td>{{ $testMailData['email'] }}</td>
                                                         </tr>
                                                         <tr>
-                                                            <th><h3>Direct Message</h3></th>
+                                                            <th align="right"><h3>Direct Message</h3></th>
                                                             <td>{{ $testMailData['message'] }}</td>
                                                         </tr>
                                                     </tbody>
