@@ -27,9 +27,23 @@
                                         <!-- Body -->
                                         <tr>
                                             <td class="body" style="padding: 40px; text-align: left; font-size: 16px; line-height: 1.6;">
-                                            <h3>From : </h3> {{ $testMailData['name'] }} <br>
-                                            <h3>Email : </h3> {{ $testMailData['email'] }} <br>
-                                            <h3>Direct Message : </h3> {{ $testMailData['message'] }} <br>
+                                                <table>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th><h3>From</h3></th>
+                                                            <td>{{ $testMailData['name'] }}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th><h3>Email</h3></th>
+                                                            <td>{{ $testMailData['email'] }}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th><h3>Direct Message</h3></th>
+                                                            <td>{{ $testMailData['message'] }}</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
                                         </tr>
 
                                         <!-- Call to action Button -->
