@@ -92,6 +92,10 @@ class EnquiryController extends Controller
      */
     public function destroy(Enquiry $enquiry)
     {
-        //
+        $enquiry->delete();
+
+        session()->flash('success', 'Enquiry deleted successfully.');
+
+        return redirect()->route('enquiries.index');
     }
 }
