@@ -23,3 +23,7 @@ Route::get('/redirecttoism', function () {
 })->name('redirecttoism');
 
 Route::resource('/enquiries', \App\Http\Controllers\EnquiryController::class);
+
+Route::get('/template01', function () {
+    return view('emails.template01');
+});

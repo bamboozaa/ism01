@@ -39,7 +39,7 @@ class SendMail extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'emails.testMail',
+            view: 'emails.template01',
         );
     }
 

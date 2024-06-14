@@ -30,6 +30,7 @@
                 <th>No.</th>
                 <th>Name</th>
                 <th>Message</th>
+                <th>Nationality</th>
                 <th>Created Date</th>
                 <th></th>
             </tr>
@@ -41,6 +42,7 @@
                         <td>{{ $key + 1 }}</td>
                         <td class="text-nowrap"><a href="{{ route('enquiries.show', $enquiry['enq_id']) }}" target="_blank">{{ $enquiry['name'] }}</a></td>
                         <td>{{ $enquiry['direct_message'] }}</td>
+                        <td>{{ $enquiry['nationality'] }}</td>
                         <td class="text-nowrap">{{ $enquiry['created_at'] }}</td>
                         <td>
                             <div class="dropdown">
