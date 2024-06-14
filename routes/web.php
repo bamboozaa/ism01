@@ -18,4 +18,8 @@ Route::get('/', function () {
     return redirect()->to('https://ism.utcc.ac.th');
 });
 
+Route::get('/redirecttoism', function () {
+    return view('redirect');
+})->name('redirecttoism');
+
 Route::resource('/enquiries', \App\Http\Controllers\EnquiryController::class);

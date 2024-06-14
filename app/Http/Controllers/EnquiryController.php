@@ -15,7 +15,8 @@ class EnquiryController extends Controller
      */
     public function index()
     {
-        return view('enquiry.index');
+        $enquiries = Enquiry::orderByRaw('created_at DESC')->get();
+        return view('enquiry.index', compact('enquiries'));
     }
 
     /**
@@ -59,7 +60,7 @@ class EnquiryController extends Controller
 
         session()->flash('success', 'Enquiry created successfully.');
 
-        return redirect()->route('enquiries.index');
+        return redirect()->route('redirecttoism');
     }
 
     /**
@@ -67,7 +68,7 @@ class EnquiryController extends Controller
      */
     public function show(Enquiry $enquiry)
     {
-        //
+        return view('enquiry.view', compact('enquiry'));
     }
 
     /**

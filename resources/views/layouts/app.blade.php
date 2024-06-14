@@ -11,7 +11,6 @@
 
     <!-- Custom Style -->
     @yield('importcss')
-    @yield('importjs')
 </head>
 <body>
 
@@ -22,6 +21,6 @@
         </div>
     </div>
 </div>
-
+@yield('importjs')
 </body>
 </html>
