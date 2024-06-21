@@ -51,11 +51,11 @@
                                 </button>
                                 <div class="dropdown-menu dropdown-menu-end" style="">
                                     <a class="dropdown-item" href="{{ route('enquiries.show', $enquiry['enq_id']) }}" data-coreui-i18n="info" target="_blank">{{ __('Info') }}</a>
-                                    {{-- <form action="{{ route('enquiries.destroy', $enquiry['enq_id']) }}" method="post">
+                                    <form action="{{ route('enquiries.destroy', $enquiry['enq_id']) }}" method="post">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="dropdown-item text-danger">Delete</button>
-                                    </form> --}}
+                                    </form>
                                 </div>
                             </div>
                         </td>
