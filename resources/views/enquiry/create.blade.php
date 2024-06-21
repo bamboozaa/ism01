@@ -204,7 +204,7 @@
                                 <div class="row">
                                     <div class="col-12">
                                         <button id="btn-custom-revise" type="submit" name="submit" value="submit"
-                                            class="btn btn-block btn-lg"> Enquire Now </button>
+                                            class="btn btn-block btn-lg" onclick="this.disabled='true';this.value='Sending…';this.form.submit();"> Enquire Now </button>
                                     </div>
                                 </div>
                             </div>
