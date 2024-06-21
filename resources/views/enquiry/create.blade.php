@@ -24,6 +24,15 @@
         //     $('#phone').mask('000 000 0000');
         // });
 
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('exampleForm');
+            const submitButton = document.getElementById('btn-custom-revise');
+
+            form.addEventListener('submit', function() {
+                submitButton.disabled = true;
+                submitButton.textContent = 'Submitting...';
+            });
+        });
     </script>
 @stop
 
@@ -40,13 +49,14 @@
             </div>
             <div class="container" id="form-container">
                 <div class="col-12 col-md-12">
-                    <form method="post" action="{{ route('enquiries.store') }}">
+                    <form method="post" action="{{ route('enquiries.store') }}" id="exampleForm">
                         @csrf
                         <div class="text-left py-3">
                             <div class="row mb-3">
                                 <div class="col-md-6">
                                     <label for="name">Name <span class="text-danger">*</span></label>
-                                    <input type="text" id="name" name="name" class="form-control @error('name') is-invalid @enderror" placeholder="Full Name">
+                                    <input type="text" id="name" name="name"
+                                        class="form-control @error('name') is-invalid @enderror" placeholder="Full Name">
 
                                     @error('name')
                                         <span class="invalid-feedback" role="alert">
@@ -57,7 +67,8 @@
                                 </div>
                                 <div class="col-md-6">
                                     <label for="nationality">Nationality <span class="text-danger">*</span></label>
-                                    <input type="text" id="nationality" name="nationality" class="form-control @error('nationality') is-invalid @enderror">
+                                    <input type="text" id="nationality" name="nationality"
+                                        class="form-control @error('nationality') is-invalid @enderror">
 
                                     @error('nationality')
                                         <span class="invalid-feedback" role="alert">
@@ -69,20 +80,25 @@
                             </div>
                             <div class="row mb-3">
                                 <div class="col-md-6">
-                                    <label for="program_interested">PROGRAM INTERESTED <span class="text-danger">*</span></label>
-                                    <select id="program_interested" name="program_interested" class="form-select @error('program_interested') is-invalid @enderror">
+                                    <label for="program_interested">PROGRAM INTERESTED <span
+                                            class="text-danger">*</span></label>
+                                    <select id="program_interested" name="program_interested"
+                                        class="form-select @error('program_interested') is-invalid @enderror">
                                         <option value="" selected disabled hidden>Choose here</option>
-                                        <option value="BBA - International Business Management">BBA - International Business Management</option>
+                                        <option value="BBA - International Business Management">BBA - International Business
+                                            Management</option>
                                         <!-- <option value="BBA – Hospitality Business Management">BBA – Hospitality Business Management</option> -->
-                                        <option value="BACC – Bachelor of Accountancy">BACC – Bachelor of Accountancy</option>
+                                        <option value="BACC – Bachelor of Accountancy">BACC – Bachelor of Accountancy
+                                        </option>
                                         <!-- <option value="BBA/BB (Australia – Two Degree Program)">BBA/BB (Australia – Two Degree Program)</option> -->
                                         <!-- Added by Komsan 24/05/2021 -->
-                                        <option value="BA - Business English Option in the major">BA - Business English Option in the major</option>
+                                        <option value="BA - Business English Option in the major">BA - Business English
+                                            Option in the major</option>
                                         <!-- Backup by Komsan 24/05/2021
-                                        <option value="BACC/BCOM (Australia – Two Degree Program)">BACC/BCOM (Australia – Two Degree Program)</option>-->
+                                            <option value="BACC/BCOM (Australia – Two Degree Program)">BACC/BCOM (Australia – Two Degree Program)</option>-->
                                         <option value="GLOBAL MBA">GLOBAL MBA</option>
                                         <!--<option value="GLOBAL MBA/MIME (Australia – Two Degree Program)">GLOBAL MBA/MIME (Australia – Two Degree Program)</option>
-                                        <option value="GLOBAL MBA/MPA (Australia – Two Degree Program)">GLOBAL MBA/MPA (Australia – Two Degree Program)</option>-->
+                                            <option value="GLOBAL MBA/MPA (Australia – Two Degree Program)">GLOBAL MBA/MPA (Australia – Two Degree Program)</option>-->
                                         <!-- Add 17/03/2021 by Komsan -->
                                         <option value="BBA (MCU Program)">BBA (MCU Program)</option>
                                         <option value="XMBA">XMBA</option>
@@ -99,13 +115,14 @@
                                 </div>
                                 <div class="col-md-6">
                                     <label for="entry_semester">ENTRY SEMESTER <span class="text-danger">*</span></label>
-                                    <select id="entry_semester" name="entry_semester" class="form-select @error('entry_semester') is-invalid @enderror">
+                                    <select id="entry_semester" name="entry_semester"
+                                        class="form-select @error('entry_semester') is-invalid @enderror">
                                         <option value="" selected disabled hidden>Choose here</option>
                                         <!--<option value="AUG 2020">AUG 2020</option>-->
                                         <!-- <option value="JAN 2021">JAN 2021</option>
-                                        <option value="AUG 2021">AUG 2021</option>
-                                        <option value="JAN 2022">JAN 2022</option>
-                                        <option value="AUG 2022">AUG 2022</option> -->
+                                            <option value="AUG 2021">AUG 2021</option>
+                                            <option value="JAN 2022">JAN 2022</option>
+                                            <option value="AUG 2022">AUG 2022</option> -->
                                         <!-- Add 17/03/2021 by Komsan -->
                                         <option value="JAN 2023">JAN 2023</option>
                                         <option value="AUG 2023">AUG 2023</option>
@@ -123,8 +140,11 @@
                             </div>
                             <div class="row mb-3">
                                 <div class="col-md-6">
-                                    <label for="current_education">CURRENT EDUCATION STATUS <span class="text-danger">*</span></label>
-                                    <input type="text" name="current_education" value="" class="form-control @error('current_education') is-invalid @enderror" list="current_education">
+                                    <label for="current_education">CURRENT EDUCATION STATUS <span
+                                            class="text-danger">*</span></label>
+                                    <input type="text" name="current_education" value=""
+                                        class="form-control @error('current_education') is-invalid @enderror"
+                                        list="current_education">
                                     <datalist id="current_education">
                                         <option>Grade 12</option>
                                         <option>M.6</option>
@@ -143,8 +163,10 @@
 
                                 </div>
                                 <div class="col-md-6">
-                                    <label for="school_name">SCHOOL/UNIVERSITY NAME <span class="text-danger">*</span></label>
-                                    <input type="text" id="school_name" name="school_name" class="form-control @error('school_name') is-invalid @enderror">
+                                    <label for="school_name">SCHOOL/UNIVERSITY NAME <span
+                                            class="text-danger">*</span></label>
+                                    <input type="text" id="school_name" name="school_name"
+                                        class="form-control @error('school_name') is-invalid @enderror">
 
                                     @error('school_name')
                                         <span class="invalid-feedback" role="alert">
@@ -157,7 +179,8 @@
                             <div class="row mb-3">
                                 <div class="col-md-6">
                                     <label for="email">EMAIL <span class="text-danger">*</span></label>
-                                    <input type="text" id="email" name="email" placeholder="Email Address" class="form-control @error('email') is-invalid @enderror">
+                                    <input type="text" id="email" name="email" placeholder="Email Address"
+                                        class="form-control @error('email') is-invalid @enderror">
 
                                     @error('email')
                                         <span class="invalid-feedback" role="alert">
@@ -168,14 +191,17 @@
                                 </div>
                                 <div class="col-md-6">
                                     <label for="phone">MOBILE </label><br />
-                                    <input type="tel" id="phone" name="phone" placeholder="Mobile Number" class="form-control">
+                                    <input type="tel" id="phone" name="phone" placeholder="Mobile Number"
+                                        class="form-control">
                                 </div>
                             </div>
                             <div class="row mb-3">
 
                                 <div class="col-12">
-                                    <label for="where_did_you_hear">WHERE DID YOU HEAR ABOUT UTCC-ISM? <span class="text-danger">*</span></label><br />
-                                    <input type="text" id="where_did_you_hear" name="where_did_you_hear" class="form-control @error('direct_message') is-invalid @enderror">
+                                    <label for="where_did_you_hear">WHERE DID YOU HEAR ABOUT UTCC-ISM? <span
+                                            class="text-danger">*</span></label><br />
+                                    <input type="text" id="where_did_you_hear" name="where_did_you_hear"
+                                        class="form-control @error('direct_message') is-invalid @enderror">
 
                                     @error('where_did_you_hear')
                                         <span class="invalid-feedback" role="alert">
@@ -188,7 +214,8 @@
                             <div class="row mb-3">
                                 <div class="col-12">
                                     <label for="direct_message">DIRECT MESSAGE <span class="text-danger">*</span></label>
-                                    <textarea name="direct_message" class="form-control  @error('direct_message') is-invalid @enderror" id="direct_message" rows="3"></textarea>
+                                    <textarea name="direct_message" class="form-control  @error('direct_message') is-invalid @enderror"
+                                        id="direct_message" rows="3"></textarea>
                                     {{-- <input type="text" id="direct_message" name="direct_message" class="form-control @error('direct_message') is-invalid @enderror" /> --}}
 
                                     @error('direct_message')
@@ -204,7 +231,7 @@
                                 <div class="row">
                                     <div class="col-12">
                                         <button id="btn-custom-revise" type="submit" name="submit" value="submit"
-                                            class="btn btn-block btn-lg"> Enquire Now </button>
+                                            class="btn btn-block btn-lg" > Enquire Now </button>
                                     </div>
                                 </div>
                             </div>
