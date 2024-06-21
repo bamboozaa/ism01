@@ -3,7 +3,7 @@
 
 @section('importcss')
     @parent
-
+    {{ Html::style('css/custom.css') }}
 @stop
 
 @section('importjs')
@@ -24,7 +24,7 @@
     <header class="banner">
         <img src="../img/banner_home.png" alt="" class="d-none d-lg-block w-100">
     </header>
-    <table id="example" class="table table-striped table-hover nowrap" style="width:100%">
+    <table id="example" class="table table-striped table-bordered table-hover nowrap" style="width:100%">
         <thead>
             <tr>
                 <th>No.</th>
@@ -49,14 +49,14 @@
                                 <button class="btn btn-transparent p-0 dark:text-high-emphasis" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <i class="bi bi-three-dots-vertical"></i>
                                 </button>
-                                <div class="dropdown-menu dropdown-menu-end" style="">
+                                {{-- <div class="dropdown-menu dropdown-menu-end" style="">
                                     <a class="dropdown-item" href="{{ route('enquiries.show', $enquiry['enq_id']) }}" data-coreui-i18n="info" target="_blank">{{ __('Info') }}</a>
                                     <form action="{{ route('enquiries.destroy', $enquiry['enq_id']) }}" method="post">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="dropdown-item text-danger">Delete</button>
                                     </form>
-                                </div>
+                                </div> --}}
                             </div>
                         </td>
                     </tr>
