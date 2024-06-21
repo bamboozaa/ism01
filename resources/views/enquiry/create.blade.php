@@ -92,15 +92,14 @@
                                         </option>
                                         <!-- <option value="BBA/BB (Australia – Two Degree Program)">BBA/BB (Australia – Two Degree Program)</option> -->
                                         <!-- Added by Komsan 24/05/2021 -->
-                                        <option value="BA - Business English Option in the major">BA - Business English
-                                            Option in the major</option>
+                                        {{-- <option value="BA - Business English Option in the major">BA - Business English Option in the major</option> --}}
                                         <!-- Backup by Komsan 24/05/2021
                                             <option value="BACC/BCOM (Australia – Two Degree Program)">BACC/BCOM (Australia – Two Degree Program)</option>-->
                                         <option value="GLOBAL MBA">GLOBAL MBA</option>
                                         <!--<option value="GLOBAL MBA/MIME (Australia – Two Degree Program)">GLOBAL MBA/MIME (Australia – Two Degree Program)</option>
                                             <option value="GLOBAL MBA/MPA (Australia – Two Degree Program)">GLOBAL MBA/MPA (Australia – Two Degree Program)</option>-->
                                         <!-- Add 17/03/2021 by Komsan -->
-                                        <option value="BBA (MCU Program)">BBA (MCU Program)</option>
+                                        {{-- <option value="BBA (MCU Program)">BBA (MCU Program)</option> --}}
                                         <option value="XMBA">XMBA</option>
                                         <option value="Doctor of Management">Doctor of Management</option>
                                         <!-- End Add 17/03/2021 by Komsan -->
