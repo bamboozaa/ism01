@@ -50,7 +50,7 @@
                                     <i class="bi bi-three-dots-vertical"></i>
                                 </button>
                                 <div class="dropdown-menu dropdown-menu-end" style="">
-                                    <a class="dropdown-item" href="{{ route('enquiries.show', $enquiry['enq_id']) }}" data-coreui-i18n="info" target="_blank">{{ __('Info') }}</a>
+                                    <a class="dropdown-item text-info" href="{{ route('enquiries.show', $enquiry['enq_id']) }}" data-coreui-i18n="info" target="_blank">{{ __('Info') }}</a>
                                     {{-- <form action="{{ route('enquiries.destroy', $enquiry['enq_id']) }}" method="post">
                                         @csrf
                                         @method('DELETE')
