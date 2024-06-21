@@ -27,3 +27,11 @@ Route::resource('/enquiries', \App\Http\Controllers\EnquiryController::class);
 Route::get('/template01', function () {
     return view('emails.template01');
 });
+
+Auth::routes([
+    'reset' => false,
+    'verify' => false,
+    'register' => false,
+]);
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

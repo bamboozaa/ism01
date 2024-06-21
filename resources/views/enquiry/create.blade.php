@@ -38,9 +38,9 @@
 
 @section('content')
 
-    <header class="banner">
+    {{-- <header class="banner">
         <img src="../img/banner_home.png" alt="" class="d-none d-lg-block w-100">
-    </header>
+    </header> --}}
 
     <div class="container-fluid" id="detail-container">
         <div class="row">
@@ -123,10 +123,12 @@
                                             <option value="JAN 2022">JAN 2022</option>
                                             <option value="AUG 2022">AUG 2022</option> -->
                                         <!-- Add 17/03/2021 by Komsan -->
-                                        <option value="JAN 2023">JAN 2023</option>
-                                        <option value="AUG 2023">AUG 2023</option>
+                                        {{-- <option value="JAN 2023">JAN 2023</option>
+                                        <option value="AUG 2023">AUG 2023</option> --}}
                                         <option value="JAN 2024">JAN 2024</option>
                                         <option value="AUG 2024">AUG 2024</option>
+                                        <option value="JAN 2023">JAN 2025</option>
+                                        <option value="AUG 2023">AUG 2025</option>
                                     </select>
 
                                     @error('entry_semester')

@@ -10,11 +10,18 @@ use App\Mail\SendMail;
 
 class EnquiryController extends Controller
 {
+    // public function __construct()
+    // {
+    //     $this->middleware('auth')->only([
+    //         'index',
+    //     ]);
+    // }
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
+
         $enquiries = Enquiry::orderByRaw('created_at DESC')->get();
         return view('enquiry.index', compact('enquiries'));
     }
