@@ -102,6 +102,7 @@
                                         {{-- <option value="BBA (MCU Program)">BBA (MCU Program)</option> --}}
                                         <option value="XMBA">XMBA</option>
                                         <option value="Doctor of Management">Doctor of Management</option>
+                                        <option value="Bachelor Foundation Certificate Program (BFCP)">Bachelor Foundation Certificate Program (BFCP)</option>
                                         <!-- End Add 17/03/2021 by Komsan -->
                                     </select>
 
@@ -144,8 +145,7 @@
                                     <label for="current_education">CURRENT EDUCATION STATUS <span
                                             class="text-danger">*</span></label>
                                     <input type="text" name="current_education" value=""
-                                        class="form-control @error('current_education') is-invalid @enderror"
-                                        list="current_education">
+                                        class="form-control @error('current_education') is-invalid @enderror" list="current_education">
                                     <datalist id="current_education">
                                         <option>Grade 12</option>
                                         <option>M.6</option>
