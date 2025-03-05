@@ -28,6 +28,30 @@ Route::get('/template01', function () {
     return view('emails.template01');
 });
 
+Route::get('/template_bacc', function () {
+    return view('emails.bacc');
+});
+
+Route::get('/template_bba', function () {
+    return view('emails.bba');
+});
+
+Route::get('/template_bfcp', function () {
+    return view('emails.bfcp');
+});
+
+Route::get('/template_dm', function () {
+    return view('emails.dm');
+});
+
+Route::get('/template_gmba', function () {
+    return view('emails.gmba');
+});
+
+Route::get('/template_xmba', function () {
+    return view('emails.xmba');
+});
+
 Auth::routes([
     'reset' => false,
     'verify' => false,
