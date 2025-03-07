@@ -62,6 +62,7 @@ class EnquiryController extends Controller
             // 'body' => 'This is the body of test email',
             'name' => $request->name,
             'email' => $request->email,
+            'program_interested' => $request->program_interested,
             'message' => $request->direct_message,
             'create_date' => date('Y-m-d H:i:s'),
             'id' => $id,

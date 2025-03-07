@@ -38,6 +38,7 @@ class SendMail extends Mailable
      */
     public function content(): Content
     {
+        // dd($testMailData['program_interested']);
         return new Content(
             view: 'emails.template01',
         );
