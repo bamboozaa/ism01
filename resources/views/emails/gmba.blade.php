@@ -55,7 +55,7 @@
             <h2>Global MBA (GMBA)</h2>
         </div>
 
-        <p>Dear [Name],</p>
+        <p>Dear {{ $testMailData['name'] }},</p>
 
         <p>Thank you for reaching out and expressing your interest in the Global MBA (GMBA) program at the International
             School of Management (ISM), University of the Thai Chamber of Commerce (UTCC).</p>

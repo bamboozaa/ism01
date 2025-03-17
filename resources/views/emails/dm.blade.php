@@ -50,7 +50,7 @@
             <h2>Doctor of Management (DM)</h2>
         </div>
 
-        <p>Dear [Name],</p>
+        <p>Dear {{ $testMailData['name'] }},</p>
 
         <p>Thank you for your interest in the Doctor of Management (DM) Program (International Program) at the
             International School of Management (ISM), University of the Thai Chamber of Commerce (UTCC).</p>

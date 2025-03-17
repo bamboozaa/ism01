@@ -68,7 +68,8 @@ class EnquiryController extends Controller
             'id' => $id,
         ];
 
-        Mail::to('ism@utcc.ac.th')->cc('komsan_aia@utcc.ac.th')->send(new SendMail($testMailData));
+        Mail::to($request->email)->send(new SendMail($testMailData));
+        // Mail::to('ism@utcc.ac.th')->cc('komsan_aia@utcc.ac.th')->send(new SendMail($testMailData));
 
         session()->flash('success', 'Enquiry created successfully.');
 

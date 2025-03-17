@@ -52,9 +52,9 @@
                                                 <!-- CTA Button -->
                                                 <table cellspacing="0" cellpadding="0" style="margin: auto;">
                                                     <tr>
-                                                        <td align="center" style="background-color: #345C72; padding: 10px 20px; border-radius: 5px;">
+                                                        {{-- <td align="center" style="background-color: #345C72; padding: 10px 20px; border-radius: 5px;">
                                                             <a href="https://admissionism.utcc.ac.th/enquiries/{{ $testMailData['id'] }}" target="_blank" style="color: #ffffff; text-decoration: none; font-weight: bold;">Click here to the detail.</a>
-                                                        </td>
+                                                        </td> --}}
                                                     </tr>
                                                 </table>
                                             </td>

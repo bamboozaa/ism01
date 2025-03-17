@@ -88,8 +88,7 @@
                                         <option value="BBA - International Business Management">BBA - International Business
                                             Management</option>
                                         <!-- <option value="BBA – Hospitality Business Management">BBA – Hospitality Business Management</option> -->
-                                        <option value="BACC – Bachelor of Accountancy">BACC – Bachelor of Accountancy
-                                        </option>
+                                        <option value="BACC – Bachelor of Accountancy">BACC – Bachelor of Accountancy</option>
                                         <!-- <option value="BBA/BB (Australia – Two Degree Program)">BBA/BB (Australia – Two Degree Program)</option> -->
                                         <!-- Added by Komsan 24/05/2021 -->
                                         {{-- <option value="BA - Business English Option in the major">BA - Business English Option in the major</option> --}}

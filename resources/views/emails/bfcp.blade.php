@@ -52,7 +52,7 @@
             <h2>Bachelor Foundation Certificate Program (BFCP)</h2>
         </div>
 
-        <p>Dear [Name],</p>
+        <p>Dear {{ $testMailData['name'] }},</p>
 
         <p>Thank you for your interest in the Bachelor Foundation Certificate Program (BFCP) at the International School
             of Management (ISM), University of the Thai Chamber of Commerce (UTCC).</p>

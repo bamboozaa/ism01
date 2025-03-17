@@ -29,7 +29,7 @@ class SendMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'UTCC INTERNATIONAL ENQUIRY FORM',
+            subject: $this->testMailData['program_interested'] . ', UTCC',
         );
     }
 
@@ -38,10 +38,51 @@ class SendMail extends Mailable
      */
     public function content(): Content
     {
-        // dd($testMailData['program_interested']);
-        return new Content(
-            view: 'emails.template01',
-        );
+        // dd($this->testMailData['program_interested']);
+        switch ($this->testMailData['program_interested']) {
+            case 'BBA - International Business Management':
+                return new Content(
+                    view: 'emails.bba',
+                );
+            break;
+
+            case 'BACC – Bachelor of Accountancy':
+                return new Content(
+                    view: 'emails.bacc',
+                );
+            break;
+
+            case 'GLOBAL MBA':
+                return new Content(
+                    view: 'emails.gmba',
+                );
+            break;
+
+            case 'XMBA':
+                return new Content(
+                    view: 'emails.xmba',
+                );
+            break;
+
+            case 'Doctor of Management':
+                return new Content(
+                    view: 'emails.dm',
+                );
+            break;
+
+            case 'Bachelor Foundation Certificate Program (BFCP)':
+                return new Content(
+                    view: 'emails.bfcp',
+                );
+            break;
+
+            default:
+                # code...
+                break;
+        }
+        // return new Content(
+        //     view: 'emails.template01',
+        // );
     }
 
     /**

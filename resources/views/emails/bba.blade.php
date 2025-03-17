@@ -54,7 +54,7 @@
             <h2>Bachelor of Business Administration (BBA)</h2>
         </div>
 
-        <p>Dear [Name],</p>
+        <p>Dear {{ $testMailData['name'] }},</p>
 
         <p>Thank you for reaching out and expressing your interest in the Bachelor of Business Administration (BBA) --
             International Business Management at the International School of Management (ISM), University of the Thai

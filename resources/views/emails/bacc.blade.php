@@ -53,7 +53,7 @@
             <h1>Thank You for Your Inquiry</h1>
             <h2>Bachelor of Accountancy (B.Acc)</h2>
         </div>
-        <p>Dear [Name],</p>
+        <p>Dear {{ $testMailData['name'] }},</p>
 
         <p>Thank you for reaching out and expressing your interest in the Bachelor of Accountancy (B.Acc) at the
             International School of Management (ISM), University of the Thai Chamber of Commerce (UTCC).</p>
