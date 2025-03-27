@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app2')
 @section('title', 'INTERNATIONAL SCHOOL OF MANAGEMENT ENQUIRY FORM')
 
 @section('importcss')
