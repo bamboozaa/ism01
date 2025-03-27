@@ -30,3 +30,18 @@
     background-color: #573e8c;
     border-color: #573e8c;
 }
+
+/* Custom Navbar Styling */
+.navbar-brand {
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+.navbar-brand:hover {
+    transform: scale(1.05);
+}
+.navbar-nav .nav-link {
+    transition: all 0.3s ease;
+}
+.navbar-nav .nav-link:hover {
+    transform: translateY(-3px);
+}
