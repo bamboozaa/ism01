@@ -19,7 +19,8 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    <img src="./img/logo/UTCC_SubMain-1.png" width="133" height="40" sizes="133px" alt="มหาวิทยาลัยหอการค้าไทย">
+                    {{-- {{ config('app.name', 'Laravel') }} --}}
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -32,11 +33,11 @@
                     <ul class="navbar-nav me-auto">
                         @auth
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('enquiries.index') }}">{{ __('Enquiry') }}</a>
+                                <a class="nav-link {{ request()->routeIs('enquiries.*') ? 'active' : '' }}" href="{{ route('enquiries.index') }}">{{ __('Enquiry') }}</a>
                             </li>
                             @if (Auth::user()->role == 'admin')
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('logs.index') }}">{{ __('Logs') }}</a>
+                                    <a class="nav-link {{ request()->routeIs('logs.*') ? 'active' : '' }}" href="{{ route('logs.index') }}">{{ __('Logs') }}</a>
                                 </li>
                             @endif
                         @endauth
