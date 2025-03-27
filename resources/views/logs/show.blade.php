@@ -1,5 +1,10 @@
 @extends('layouts.app')
 
+@section('importcss')
+    @parent
+    {{ Html::style('css/custom.css') }}
+@stop
+
 @section('content')
 <div class="container">
     <div class="card">
