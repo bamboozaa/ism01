@@ -59,3 +59,10 @@ Auth::routes([
 ]);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/logs', [App\Http\Controllers\LogController::class, 'index'])->name('logs.index');
+    Route::get('/logs/{fileName}', [App\Http\Controllers\LogController::class, 'show'])->name('logs.show');
+    Route::get('/logs/{fileName}/download', [App\Http\Controllers\LogController::class, 'download'])->name('logs.download');
+    Route::delete('/logs/{fileName}', [App\Http\Controllers\LogController::class, 'destroy'])->name('logs.destroy');
+});
