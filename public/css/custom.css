@@ -39,9 +39,16 @@
 .navbar-brand:hover {
     transform: scale(1.05);
 }
+
+.nav-item {
+    transition: all 200ms linear;
+    margin: 0px 10px 0px 10px;
+}
+
 .navbar-nav .nav-link {
     transition: all 0.3s ease;
 }
 .navbar-nav .nav-link:hover {
+    color: #2e3191;
     transform: translateY(-3px);
 }

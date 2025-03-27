@@ -30,7 +30,14 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav me-auto">
+                    <ul class="navbar-nav ms-auto">
+                        
+                        
+                    </ul>
+
+                    <!-- Right Side Of Navbar -->
+                    <ul class="navbar-nav ms-auto">
+                        <!-- Authentication Links -->
                         @auth
                             <li class="nav-item">
                                 <a class="nav-link {{ request()->routeIs('enquiries.*') ? 'active' : '' }}" href="{{ route('enquiries.index') }}">{{ __('Enquiry') }}</a>
@@ -42,11 +49,6 @@
                             @endif
                         @endauth
                         
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ms-auto">
-                        <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
