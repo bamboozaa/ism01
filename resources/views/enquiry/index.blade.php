@@ -22,7 +22,7 @@
 
 @section('content')
     <header class="banner">
-        <img src="../img/banner_home.png" alt="" class="d-none d-lg-block w-100">
+        {{-- <img src="../img/banner_home.png" alt="" class="d-none d-lg-block w-100"> --}}
     </header>
     <table id="example" class="table table-striped table-bordered table-hover nowrap">
         <thead>
