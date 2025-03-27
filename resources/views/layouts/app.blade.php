@@ -19,7 +19,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    <img src="./img/logo/UTCC_SubMain-1.png" width="133" height="40" sizes="133px" alt="มหาวิทยาลัยหอการค้าไทย">
+                    <img src="img/logo/UTCC_SubMain-1.png" width="133" height="40" sizes="133px" alt="มหาวิทยาลัยหอการค้าไทย">
                     {{-- {{ config('app.name', 'Laravel') }} --}}
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -48,7 +48,7 @@
                                 </li>
                             @endif
                         @endauth
-                        
+
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
