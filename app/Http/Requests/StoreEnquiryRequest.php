@@ -28,9 +28,10 @@ class StoreEnquiryRequest extends FormRequest
             'entry_semester' => 'required',
             'current_education' => 'required',
             'school_name' => 'required',
-            'email' => 'required|string|max:255',
-            'direct_message' => 'required|string|max:255',
-            'where_did_you_hear' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'full_number' => 'required|string|max:20',
+            'direct_message' => 'nullable|string|max:1000',
+            'where_did_you_hear' => 'nullable|string|max:255',
         ];
     }
 
@@ -44,8 +45,9 @@ class StoreEnquiryRequest extends FormRequest
             'current_education.required' => 'Please enter current education.',
             'school_name.required' => 'Please enter the school name.',
             'email.required' => 'Please enter the Email Address.',
-            'direct_message.required' => 'Please enter a message to send to us.',
-            'where_did_you_hear.required' => 'Please fill in where you heard about us.',
+            'full_number.required' => 'Please enter the Mobile Number.',
+            // 'direct_message.required' => 'Please enter a message to send to us.',
+            // 'where_did_you_hear.required' => 'Please fill in where you heard about us.',
         ];
     }
 }
