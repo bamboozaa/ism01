@@ -16,6 +16,26 @@
                 icon: 'success'
             });
         @endif
+
+        // @if (session('deleted'))
+        //     Swal.fire({
+        //         title: "Are you sure?",
+        //         text: "You won't be able to revert this!",
+        //         icon: "warning",
+        //         showCancelButton: true,
+        //         confirmButtonColor: "#3085d6",
+        //         cancelButtonColor: "#d33",
+        //         confirmButtonText: "Yes, delete it!"
+        //     }).then((result) => {
+        //         if (result.isConfirmed) {
+        //             Swal.fire({
+        //                 title: "Deleted!",
+        //                 text: "Your file has been deleted.",
+        //                 icon: "success"
+        //             });
+        //         }
+        //     });
+        // @endif
     </script>
 
 @stop
@@ -40,17 +60,21 @@
                 @foreach ($enquiries as $key => $enquiry)
                     <tr>
                         <td>{{ $key + 1 }}</td>
-                        <td class="text-nowrap"><a href="{{ route('enquiries.show', $enquiry['enq_id']) }}" target="_blank">{{ $enquiry['name'] }}</a></td>
+                        <td class="text-nowrap"><a href="{{ route('enquiries.show', $enquiry['enq_id']) }}"
+                                target="_blank">{{ $enquiry['name'] }}</a></td>
                         <td>{{ $enquiry['direct_message'] }}</td>
                         <td>{{ $enquiry['nationality'] }}</td>
                         <td class="text-nowrap">{{ $enquiry['created_at'] }}</td>
                         <td>
                             <div class="dropdown">
-                                <button class="btn btn-transparent p-0 dark:text-high-emphasis" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <button class="btn btn-transparent p-0 dark:text-high-emphasis" type="button"
+                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <i class="bi bi-three-dots-vertical"></i>
                                 </button>
                                 <div class="dropdown-menu dropdown-menu-end" style="">
-                                    <a class="dropdown-item text-info" href="{{ route('enquiries.show', $enquiry['enq_id']) }}" data-coreui-i18n="info" target="_blank">{{ __('Info') }}</a>
+                                    <a class="dropdown-item text-info"
+                                        href="{{ route('enquiries.show', $enquiry['enq_id']) }}" data-coreui-i18n="info"
+                                        target="_blank">{{ __('Info') }}</a>
                                     <form action="{{ route('enquiries.destroy', $enquiry['enq_id']) }}" method="post">
                                         @csrf
                                         @method('DELETE')
