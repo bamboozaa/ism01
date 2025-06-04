@@ -213,7 +213,7 @@
                             </div>
                             <div class="row mb-3">
                                 <div class="col-12">
-                                    <label for="direct_message">DIRECT MESSAGE <span class="text-danger">*</span></label>
+                                    <label for="direct_message">DIRECT MESSAGE</label>
                                     <textarea name="direct_message" class="form-control  @error('direct_message') is-invalid @enderror"
                                         id="direct_message" rows="3"></textarea>
                                     {{-- <input type="text" id="direct_message" name="direct_message" class="form-control @error('direct_message') is-invalid @enderror" /> --}}
