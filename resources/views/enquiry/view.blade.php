@@ -24,7 +24,7 @@
             <p class="text-end">{{ 'Created Date :' . $enquiry['created_at'] }}</p>
         </div>
         <div class="container" id="form-container">
-            <div class="col-12 col-md-12 my-3">
+            <div class="col-12 col-md-12 mt-1 mb-3">
                 <div class="text-left py-3">
                     <div class="row mb-2">
                         <div class="form-group col-md-6">
