@@ -1,0 +1,17 @@
+.password-container {
+    position: relative;
+}
+
+.password-container input {
+    padding-right: 2.5rem; /* Adjust padding to make space for the icon */
+}
+
+.password-toggle {
+    position: absolute;
+    top: 50%;
+    right: 0.75rem; /* Adjust to position the icon */
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 2;
+    color: #999;
+}
