@@ -55,7 +55,7 @@
                         <div class="text-left py-3">
                             <div class="row mb-3">
                                 <div class="col-md-6">
-                                    <label for="name">NAME <span class="text-danger">*</span></label>
+                                    <label for="name">Name <span class="text-danger">*</span></label>
                                     <input type="text" id="name" name="name"
                                         class="form-control @error('name') is-invalid @enderror" placeholder="Full Name">
 
@@ -67,7 +67,7 @@
 
                                 </div>
                                 <div class="col-md-6">
-                                    <label for="nationality">NATIONALITY <span class="text-danger">*</span></label>
+                                    <label for="nationality">Nationality <span class="text-danger">*</span></label>
                                     <input type="text" id="nationality" name="nationality"
                                         class="form-control @error('nationality') is-invalid @enderror">
 
@@ -81,7 +81,7 @@
                             </div>
                             <div class="row mb-3">
                                 <div class="col-md-6">
-                                    <label for="program_interested">PROGRAM INTERESTED <span
+                                    <label for="program_interested">Program Interested <span
                                             class="text-danger">*</span></label>
                                     <select id="program_interested" name="program_interested"
                                         class="form-select @error('program_interested') is-invalid @enderror">
@@ -114,7 +114,7 @@
 
                                 </div>
                                 <div class="col-md-6">
-                                    <label for="entry_semester">ENTRY SEMESTER <span class="text-danger">*</span></label>
+                                    <label for="entry_semester">Entry Semester <span class="text-danger">*</span></label>
                                     <select id="entry_semester" name="entry_semester"
                                         class="form-select @error('entry_semester') is-invalid @enderror">
                                         <option value="" selected disabled hidden>Choose here</option>
@@ -142,7 +142,7 @@
                             </div>
                             <div class="row mb-3">
                                 <div class="col-md-6">
-                                    <label for="current_education">CURRENT EDUCATION STATUS <span
+                                    <label for="current_education">Current Education Status <span
                                             class="text-danger">*</span></label>
                                     <input type="text" name="current_education" value=""
                                         class="form-control @error('current_education') is-invalid @enderror" list="current_education">
@@ -164,7 +164,7 @@
 
                                 </div>
                                 <div class="col-md-6">
-                                    <label for="school_name">SCHOOL/UNIVERSITY NAME <span
+                                    <label for="school_name">School/University Name <span
                                             class="text-danger">*</span></label>
                                     <input type="text" id="school_name" name="school_name"
                                         class="form-control @error('school_name') is-invalid @enderror">
@@ -179,7 +179,7 @@
                             </div>
                             <div class="row mb-3">
                                 <div class="col-md-6">
-                                    <label for="email">EMAIL <span class="text-danger">*</span></label>
+                                    <label for="email">Email <span class="text-danger">*</span></label>
                                     <input type="text" id="email" name="email" placeholder="Email Address"
                                         class="form-control @error('email') is-invalid @enderror">
 
@@ -191,7 +191,7 @@
 
                                 </div>
                                 <div class="col-md-6">
-                                    <label for="phone">MOBILE </label><br />
+                                    <label for="phone">Mobile </label><br />
                                     <input type="tel" id="phone" name="phone" placeholder="Mobile Number"
                                         class="form-control">
                                 </div>
@@ -199,7 +199,7 @@
                             <div class="row mb-3">
 
                                 <div class="col-12">
-                                    <label for="where_did_you_hear">WHERE DID YOU HEAR ABOUT UTCC-ISM? <span
+                                    <label for="where_did_you_hear">Where did you hear about UTCC-iSM? <span
                                             class="text-danger">*</span></label><br />
                                     <input type="text" id="where_did_you_hear" name="where_did_you_hear"
                                         class="form-control @error('direct_message') is-invalid @enderror">
@@ -214,7 +214,7 @@
                             </div>
                             <div class="row mb-3">
                                 <div class="col-12">
-                                    <label for="direct_message">DIRECT MESSAGE</label>
+                                    <label for="direct_message">Direct Message</label>
                                     <textarea name="direct_message" class="form-control  @error('direct_message') is-invalid @enderror"
                                         id="direct_message" rows="3"></textarea>
                                     {{-- <input type="text" id="direct_message" name="direct_message" class="form-control @error('direct_message') is-invalid @enderror" /> --}}
@@ -265,7 +265,8 @@
         </div>
     </div>
     <footer class="justify-content-between footer p-2 text-center" style="background-color: #02247d; color: #fff">
-        <div class="col-12"> Copyright @ 2020 </div>
+        <div class="col-12"> Copyright © 2025 The University of the Thai Chamber of Commerce. All rights reserved.
+ </div>
     </footer>
 
     <!-- Optional JavaScript -->
