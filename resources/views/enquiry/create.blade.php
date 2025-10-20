@@ -1,5 +1,6 @@
 @extends('layouts.app')
-@section('title', 'INTERNATIONAL SCHOOL OF MANAGEMENT ENQUIRY FORM')
+@section('title', 'ENQUIRY FORM - iSM | University of the Thai Chamber of Commerce')
+@section('description', 'The University of the Thai Chamber of Commerce (UTCC), Thailand\'s oldest private university, boasts 45 years of educational excellence. Our International Programs offer students worldwide a chance to study with us, experiencing both high academic standards and the vibrant Thai culture.')
 
 @section('importcss')
     @parent
@@ -54,7 +55,7 @@
                         <div class="text-left py-3">
                             <div class="row mb-3">
                                 <div class="col-md-6">
-                                    <label for="name">Name <span class="text-danger">*</span></label>
+                                    <label for="name">NAME <span class="text-danger">*</span></label>
                                     <input type="text" id="name" name="name"
                                         class="form-control @error('name') is-invalid @enderror" placeholder="Full Name">
 
@@ -66,7 +67,7 @@
 
                                 </div>
                                 <div class="col-md-6">
-                                    <label for="nationality">Nationality <span class="text-danger">*</span></label>
+                                    <label for="nationality">NATIONALITY <span class="text-danger">*</span></label>
                                     <input type="text" id="nationality" name="nationality"
                                         class="form-control @error('nationality') is-invalid @enderror">
 
