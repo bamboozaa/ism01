@@ -27,7 +27,7 @@ class EnquiryController extends Controller
 
         // dd($user);
 
-        $enquiries = Enquiry::orderByRaw('created_at DESC')->get();
+        $enquiries = Enquiry::orderByRaw('created_at DESC')->paginate(15);
         return view('enquiry.index', compact('enquiries'));
     }
 
