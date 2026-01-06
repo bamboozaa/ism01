@@ -89,6 +89,7 @@
                                         <option value="BBA - International Business Management">BBA - International Business
                                             Management</option>
                                         <!-- <option value="BBA – Hospitality Business Management">BBA – Hospitality Business Management</option> -->
+                                        <option value="BA - Tourism and Hospitality Management">BA - Tourism and Hospitality Management</option>
                                         <option value="BACC – Bachelor of Accountancy">BACC – Bachelor of Accountancy</option>
                                         <!-- <option value="BBA/BB (Australia – Two Degree Program)">BBA/BB (Australia – Two Degree Program)</option> -->
                                         <!-- Added by Komsan 24/05/2021 -->
@@ -118,18 +119,9 @@
                                     <select id="entry_semester" name="entry_semester"
                                         class="form-select @error('entry_semester') is-invalid @enderror">
                                         <option value="" selected disabled hidden>Choose here</option>
-                                        <!--<option value="AUG 2020">AUG 2020</option>-->
-                                        <!-- <option value="JAN 2021">JAN 2021</option>
-                                            <option value="AUG 2021">AUG 2021</option>
-                                            <option value="JAN 2022">JAN 2022</option>
-                                            <option value="AUG 2022">AUG 2022</option> -->
-                                        <!-- Add 17/03/2021 by Komsan -->
-                                        {{-- <option value="JAN 2023">JAN 2023</option>
-                                        <option value="AUG 2023">AUG 2023</option> --}}
-                                        <option value="JAN 2024">JAN 2024</option>
-                                        <option value="AUG 2024">AUG 2024</option>
-                                        <option value="JAN 2023">JAN 2025</option>
-                                        <option value="AUG 2023">AUG 2025</option>
+                                        <option value="June 2026">June 2026</option>
+                                        <option value="Aug 2026">Aug 2026</option>
+                                        <option value="Jan 2027">Jan 2027</option>
                                     </select>
 
                                     @error('entry_semester')

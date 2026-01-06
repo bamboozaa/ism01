@@ -74,6 +74,11 @@ class SendMail extends Mailable
                 return new Content(
                     view: 'emails.bfcp',
                 );
+
+            case 'BA - Tourism and Hospitality Management':
+                return new Content(
+                    view: 'emails.ba',
+                );
             break;
 
             default:

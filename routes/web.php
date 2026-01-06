@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -50,6 +51,10 @@ Route::get('/template_gmba', function () {
 
 Route::get('/template_xmba', function () {
     return view('emails.xmba');
+});
+
+Route::get('/template_ba', function () {
+    return view('emails.ba');
 });
 
 Auth::routes([
