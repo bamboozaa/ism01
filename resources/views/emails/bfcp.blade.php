@@ -46,6 +46,10 @@
 </head>
 
 <body>
+    @php
+        // Provide safe defaults when the view is rendered without data (e.g., preview routes)
+        $testMailData = $testMailData ?? ['name' => 'Applicant'];
+    @endphp
     <div class="container">
         <div class="header">
             <h1>Thank You for Your Inquiry</h1>
