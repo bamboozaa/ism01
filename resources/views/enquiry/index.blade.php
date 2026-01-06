@@ -196,7 +196,7 @@
 @stop
 
 @section('content')
-    <div class="container-fluid px-4 py-4">
+    <div class="container-fluid px-4">
         <div class="enquiry-header">
             <h1>📝 Enquiry Management</h1>
             <span class="badge">Total: {{ $enquiries->total() }}</span>
